@@ -114,28 +114,27 @@
           <h2>Our RoadMap</h2>
           <p>Here is our roadmap schedule</p>
         </div>
+			<button class="tablink" onclick="openPage('Rede-Q1')" id="defaultOpen">Rede Q1 2022</button>
+			<button class="tablink" onclick="openPage('Rede-Q2')">Rede Q1 2022</button>
+			<button class="tablink" onclick="openPage('Rede-Q3')">Rede Q1 2022</button>
+			<button class="tablink" onclick="openPage('Rede-Q4')">Rede Q1 2022</button>
 
-        <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
-          <li class="nav-item">
-            <a class="nav-link active" href="#day-1" role="tab" data-bs-toggle="tab">Rede Q1</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab">Rede Q2</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">Rede Q3</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab">Rede Q4</a>
-          </li>
-        </ul>
+				<div id="Rede-Q1" class="tabcontent">
+					<p>Registered on MiningpoolStat, Update Wallet, Update Website</p>
+				</div>
 
-          <div role="tabpanel" class="col-lg-9  tab-pane fade" id="day-2">
+				<div id="Rede-Q2" class="tabcontent">
+					<p>Listing on Market Exchange</p>
+				</div>
 
-          </div>
+				<div id="Rede-Q3" class="tabcontent">
+					<p>Listing on CoinPaprika, Coingecko and CoinMarketcap</p>
+				</div>
 
-      </div>
-
+				<div id="Rede-Q4" class="tabcontent">
+					<p>Actavated Coin Assets</p>
+				</div>
+    </div>
     </section>
 	<!-- End Roadmap Section -->
 
@@ -180,7 +179,6 @@
                                 </div>
                             </div>
                         </div>
-
         </div>
       </div>
 
@@ -197,13 +195,13 @@
           <p>get your favorite coin on our pool</p>
         </div>
       </div>
- <center>
-	 <a target="_blank" href="https://redpool.pl"><img src='https://redpool.pl/images/redpool.png' alt="centered image" width="144" height="66"/></a>
-	 <a target="_blank" href="https://pool4u.net/"><img src='https://cdn.discordapp.com/attachments/931981746688368702/953645640905293975/unknown.png' alt="centered image" width="144" height="66" /></a>	 
- </center>
-  <p> </p>
-  <p> </p>
-
+		<center>
+		<h6 data-aos="fade-up" data-aos-delay="200">
+			<a target="_blank" href="https://redpool.pl"><img src='https://redpool.pl/images/redpool.png' alt="centered image" width="144" height="66"/></a>
+			<a target="_blank" href="https://pool4u.net/"><img src='https://cdn.discordapp.com/attachments/931981746688368702/953645640905293975/unknown.png' alt="centered image" width="144" height="66" /></a>
+		</h6>
+		</center>
+			<p> </p>
         </div>
         <div class="swiper-pagination"></div>
       </div>
@@ -432,6 +430,24 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-</body>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
 
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+
+</body>
 </html>
