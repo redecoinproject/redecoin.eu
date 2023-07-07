@@ -4,6 +4,26 @@
     <title>REDE White Paper - Version V2</title>
     <meta name="description" content="Read the REDE White Paper to learn about the concept and features of rede coin (reliable decentralized currency). Discover how rede provides a secure method of storing and transferring funds, with a focus on simplicity, security, and cost reduction. Explore the STK system for confirming transactions and the Games version for gaming enthusiasts. Join the revolution of independent finance with rede coin.">
     <style>
+        :root {
+            --background-color-light: #ffffff;
+            --text-color-light: #000000;
+            --background-color-dark: #202020;
+            --text-color-dark: #ffffff;
+        }
+
+        body {
+            background-color: var(--background-color-light);
+            color: var(--text-color-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            margin: 0;
+            padding: 0;
+        }
+
+        body.dark-mode {
+            background-color: var(--background-color-dark);
+            color: var(--text-color-dark);
+        }
+
         .container {
             width: 80%;
             margin: 0 auto;
@@ -23,11 +43,75 @@
             text-align: justify;
             margin-bottom: 20px;
         }
+
+        .dark-mode-container {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 10px;
+        }
+
+        .dark-mode-label {
+            margin-right: 10px;
+        }
+
+        .dark-mode-toggle {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .dark-mode-toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .dark-mode-slider {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            border-radius: 34px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dark-mode-slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .dark-mode-toggle input:checked + .dark-mode-slider {
+            background-color: #2196F3;
+        }
+
+        .dark-mode-toggle input:checked + .dark-mode-slider:before {
+            transform: translateX(26px);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>REDE White Paper - Version V2</h1>
+
+        <div class="dark-mode-container">
+            <label for="darkModeToggle" class="dark-mode-label">Dark Mode:</label>
+            <label class="dark-mode-toggle">
+                <input type="checkbox" id="darkModeToggle" onchange="toggleDarkMode()">
+                <span class="dark-mode-slider"></span>
+            </label>
+        </div>
 
         <div class="section">
             <h2>Introduction</h2>
@@ -54,6 +138,13 @@
             <p>Rede coin is built on the Ethereum technology but has been expanded and tailored to accommodate various use cases. Its primary goal is to provide an alternative to traditional banking systems, minimize transaction costs, and offer staking opportunities to users. The STK system in rede eliminates the need for coin transfers and certificate creation, focusing instead on network security through node maintenance. The Games version of rede allows for rapid responsiveness during gameplay and rewards players with rede coins. Rede coin aims to deliver an innovative and independent financial option for individuals who prefer not to rely on traditional banking institutions.</p>
         </div>
     </div>
+
+    <script>
+        function toggleDarkMode() {
+            var body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
 </body>
 </html>
 
