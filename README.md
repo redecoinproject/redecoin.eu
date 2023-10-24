@@ -1,4 +1,4 @@
-"Redecoin" is a cryptocurrency based on blockchain technology that operates on the Ethash algorithm and is a fork of Ethereum. Cryptocurrencies like Redecoin are virtual currencies that operate based on decentralized blockchain technology, which means they are not controlled by any financial institution or government.
+"Redev2coin" is a cryptocurrency based on blockchain technology that operates on the Ethash algorithm and is a fork of Ethereum. Cryptocurrencies like Redecoin are virtual currencies that operate based on decentralized blockchain technology, which means they are not controlled by any financial institution or government.
 #
 Redecoin aims to facilitate fast and low-cost transfer of funds between users in the form of Redecoin crypto. This is made possible by the use of blockchain technology, which enables secure and nearly instantaneous transfer of funds without the need for a third party intermediary.
 #
