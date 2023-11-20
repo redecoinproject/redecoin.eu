@@ -28,7 +28,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -111,6 +111,53 @@
       </div>
     </section>
 	<!-- End About Section -->
+
+	<!-- Strukture start Section -->
+
+    <div style="text-align: center;">
+        <h1>Redecoin REDEV2 Project Overview</h1>
+        <center><canvas id="redev2Chart" style="max-width: 800px; max-height: 400px;"></canvas></center>
+        <p>POW: 20% | POS: 20% | Stake: 20% | Games: 20% | Invest: 20%</p>
+        <h2>Project Structure</h2>
+        <p>Redecoin is structured with a balanced distribution across key components:</p>
+        <ul>
+            <li>Proof of Work (POW): 20%</li>
+            <li>Proof of Stake (POS): 20%</li>
+            <li>Dev: 20%</li>
+            <li>Games: 20%</li>
+            <li>Invest: 20%</li>
+        </ul>
+        <p><strong>Currently, Dev, Games, Invest, are transferred to the swap from Rede to Redev2.</strong></p>
+    </div>
+
+    <script>
+        var ctx = document.getElementById('redev2Chart').getContext('2d');
+
+        var data = {
+            labels: ['POW', 'POS', 'Dev', 'Games', 'Invest'],
+            datasets: [{
+                data: [20, 20, 20, 20, 20],
+                backgroundColor: ['#FF5733', '#FFD700', '#4CAF50', '#3498DB', '#9B59B6'],
+                hoverBackgroundColor: ['#FF4500', '#FFD700', '#45A049', '#2975D7', '#8E44AD']
+            }]
+        };
+
+        var options = {
+            animation: {
+                animateRotate: true,
+                animateScale: true
+            }
+        };
+
+        // Utwórz wykres kołowy
+        var myPieChart = new Chart(ctx, {
+            type: 'doughnut', 
+            data: data,
+            options: options
+        });
+    </script>
+
+	<!-- Strukture End Section -->
 
 
     <!-- ======= Roadmap Section ======= -->
@@ -540,4 +587,5 @@
 
 </body>
 </html>
+
 
