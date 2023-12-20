@@ -57,6 +57,24 @@
       <a class="buy-tickets scrollto" href="#about">GET STARTED</a>
       -->  
     </div>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
+          document.querySelector('#navbar ul').classList.toggle('navbar-mobile');
+          this.classList.toggle('bi-list');
+          this.classList.toggle('bi-x');
+        });
+        const navLinks = document.querySelectorAll('#navbar ul li a.nav-link.scrollto');
+        navLinks.forEach(link => {
+          link.addEventListener('click', function() {
+            document.querySelector('#navbar ul').classList.remove('navbar-mobile');
+            document.querySelector('.mobile-nav-toggle').classList.remove('bi-x');
+            document.querySelector('.mobile-nav-toggle').classList.add('bi-list');
+          });
+        });
+      });
+    </script>
+    
   </header>
   <!-- End Header -->
   <!-- ======= Rede Section ======= -->
