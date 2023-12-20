@@ -19,6 +19,15 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const navbarToggle = document.querySelector(".mobile-nav-toggle");
+    const navbarMenu = document.querySelector("#navbar ul");
+    navbarToggle.addEventListener("click", function() {
+      navbarMenu.classList.toggle("active");
+    });
+  });
+</script>
 </head>
 <body>
   <!-- ======= Header ======= -->
