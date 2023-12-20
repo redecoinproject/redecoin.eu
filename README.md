@@ -2,7 +2,7 @@
 
 ## Overview
 
-RedeCoin (Rede) is a cryptocurrency that builds upon the Ethereum code base but is tailored to address needs beyond the Ethereum ecosystem. Designed with the primary objective of offering an alternative to traditional banking systems, Rede aims to provide users with a seamless and cost-effective method of conducting financial transactions. Additionally, Rede strives to introduce an element of excitement by prioritizing the elimination of boredom in its operations.
+RedeCoin (Redev2) is a cryptocurrency that builds upon the Ethereum code base but is tailored to address needs beyond the Ethereum ecosystem. Designed with the primary objective of offering an alternative to traditional banking systems, Rede aims to provide users with a seamless and cost-effective method of conducting financial transactions. Additionally, Rede strives to introduce an element of excitement by prioritizing the elimination of boredom in its operations.
 
 ## Target Audience
 
