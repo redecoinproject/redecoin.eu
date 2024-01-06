@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<title>REDEV2 Guide - Quick Node Installation Script</title>
+		<meta
+			content="Discover RedeCoin as Redev2 - a cutting-edge decentralized digital currency designed for the future. Experience secure, efficient and user-friendly transactions with our advanced blockchain technology."
+			name="description"
+		/>
+		<meta
+			content="redev2, blockchain, decentralized, cryptocurrency, digital currency, redecoin, secure, peer-to-peer"
+			name="keywords"
+		/>
+		<!-- Favicons -->
+		<link href="../assets/img/favicon.ico" rel="icon" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+			rel="stylesheet"
+		/>
+		<!-- Vendor CSS Files -->
+		<link href="../assets/vendor/aos/aos.css" rel="stylesheet" />
+		<link
+			href="../assets/vendor/bootstrap/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="../assets/vendor/bootstrap-icons/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="../assets/vendor/glightbox/css/glightbox.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="../assets/vendor/swiper/swiper-bundle.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Template Main CSS File -->
+		<link href="../assets/css/style.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body>
+		<!-- ======= Header ======= -->
+		<header id="header-services" class="d-flex align-items-center">
+			<div class="container-fluid container-xxl d-flex align-items-center">
+				<div id="logo" class="me-auto">
+					<h1>
+						<a href="/">Redev2<span>Coin</span></a>
+					</h1>
+				</div>
+				<nav id="navbar" class="navbar order-last order-lg-0">
+					<ul>
+						<li><a class="nav-link scrollto active" href="/">HOME</a></li>
+						<li><a class="nav-link scrollto" href="/#about">ABOUT</a></li>
+						<li><a class="nav-link scrollto" href="/#schedule">ROADMAP</a></li>
+						<li class="dropdown">
+							<a class="nav-link scrollto" href="/#network"
+								><span>NETWORK</span> <i class="bi bi-chevron-down"></i
+							></a>
+							<ul>
+								<li>
+									<a class="nav-link scrollto" href="/#network">Wallet</a>
+								</li>
+								<li>
+									<a href="https://explorer3.redecoin.eu/" target="_blank"
+										>Explorer</a
+									>
+								</li>
+								<li>
+									<a href="https://network.redecoin.eu/" target="_blank"
+										>Stats</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="nav-link scrollto" href="/#services"
+								><span>SERVICES</span> <i class="bi bi-chevron-down"></i
+							></a>
+							<ul>
+								<li>
+									<a href="../services/node-install.html">Node Installation</a>
+								</li>
+								<li>
+									<a href="../services/staking.html">Staking</a>
+								</li>
+								<li>
+									<a href="https://vpn.redecoin.eu" target="_blank">VPN</a>
+								</li>
+								<li>
+									<a href="https://pool2.redecoin.eu/" target="_blank"
+										>Official Mining Pool</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="/#aggregator">AGGREGATOR</a>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="/#exchange">EXCHANGES</a>
+						</li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav>
+				<!-- .navbar -->
+			</div>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					document
+						.querySelector('.mobile-nav-toggle')
+						.addEventListener('click', function () {
+							document
+								.querySelector('#navbar ul')
+								.classList.toggle('navbar-mobile');
+							this.classList.toggle('bi-list');
+							this.classList.toggle('bi-x');
+						});
+					const navLinks = document.querySelectorAll(
+						'#navbar ul li a.nav-link.scrollto'
+					);
+					navLinks.forEach(link => {
+						link.addEventListener('click', function () {
+							document
+								.querySelector('#navbar ul')
+								.classList.remove('navbar-mobile');
+							document
+								.querySelector('.mobile-nav-toggle')
+								.classList.remove('bi-x');
+							document
+								.querySelector('.mobile-nav-toggle')
+								.classList.add('bi-list');
+						});
+					});
+				});
+			</script>
+		</header>
+		<!-- End Header -->
+		<!-- ======= Main ======= -->
+		<main id="main">
+			<section id="schedule" class="section-with-bg">
+				<div class="container" data-aos="fade-up">
+					<h2 class="section-header">How to install node?</h2>
+					<div class="node">
+						<p class="node__text">
+							This script allows you to install a node for the REDEV2 network on
+							your Ubuntu system. Choose the appropriate version for your Ubuntu
+							distribution and run the corresponding command below.
+						</p>
+						<h3 class="node__h3">Ubuntu 18.04</h3>
+						<span class="node__code"
+							>curl -sSL
+							https://github.com/redecoinproject/node/raw/master/ubdate_ubuntu18.sh
+							| bash</span
+						>
+						<h3 class="node__h3">Ubuntu 20.04</h3>
+						<span class="node__code"
+							>curl -sSL
+							https://github.com/redecoinproject/node/raw/master/ubuntu20.sh |
+							bash</span
+						>
+						<h3 class="node__h3">Ubuntu 23.04</h3>
+						<span class="node__code"
+							>curl -sSL
+							https://github.com/redecoinproject/node/raw/master/ubuntu23.04.sh
+							| bash</span
+						>
+						<h3 class="node__h3">ARM</h3>
+						<span class="node__code"
+							>curl -sSL
+							https://github.com/redecoinproject/node/raw/master/arm.sh |
+							bash</span
+						>
+						<h3 class="node__h3">Update for ARM</h3>
+						<span class="node__code"
+							>curl -sSL
+							https://github.com/redecoinproject/node/raw/master/ubdate_arm.sh |
+							bash</span
+						>
+						<span class="node__alert"
+							>Make sure you run the script with administrator permissions if
+							your system requires it</span
+						>
+						<p class="node__text node__text--end">
+							<b>License</b>: This project is licensed under the MIT License.<br />
+							<b>Contributing</b>: If you'd like to contribute to this project,
+							please follow our contribution guidelines. <br />
+							<b>Issues</b>: If you encounter any issues or have questions,
+							please open an issue on our GitHub repository.
+						</p>
+					</div>
+				</div>
+			</section>
+			<!-- End #main -->
+		</main>
+		<!-- ======= Footer ======= -->
+		<footer id="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 footer-info">
+							<img src="../assets/img/apple-touch-icon.png" alt="RedeCoin" />
+							<p>
+								Be a part of the future of finance with RedeCoin. Explore,
+								engage, and empower.
+							</p>
+						</div>
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Track us</h4>
+							<ul>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a
+										href="https://miningpoolstats.stream/redecoin"
+										target="_blank"
+										>Miningpoolstats</a
+									>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a
+										href="https://coinpaprika.com/coin/redev2-redecoin/"
+										target="_blank"
+										>CoinPaprika</a
+									>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://blockspot.io/coin/redecoin/" target="_blank"
+										>BlockSpot</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Utilities</h4>
+							<ul>
+								<li>
+									<i class="bi bi-chevron-right"></i><a href="">Node Script</a>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://stake.redecoin.eu/">Staking Panel</a>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://vpn.redecoin.eu">VPN</a>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://redev2-staking.pw/">PAC Staking Platform</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-6 footer-contact">
+							<h4>Social Media</h4>
+							<div class="social-links">
+								<a
+									href="https://www.redecoin.eu"
+									class="website"
+									target="_blank"
+									><i class="bi bi-globe"></i
+								></a>
+								<a
+									href="https://github.com/redecoinproject"
+									class="github"
+									target="_blank"
+									><i class="bi bi-github"></i
+								></a>
+								<a
+									href="https://twitter.com/CoinRede"
+									class="twitter"
+									target="_blank"
+									><i class="bi bi-twitter"></i
+								></a>
+								<a
+									href="https://t.me/+rNRAiKzx-ydiYjhk"
+									class="telegram"
+									target="_blank"
+									><i class="bi bi-telegram"></i
+								></a>
+								<a
+									href="https://discord.gg/MhBP2hEehU"
+									class="discord"
+									target="_blank"
+									><i class="bi bi-discord"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="copyright">
+					&copy; Copyright <strong>Redecoin 2022 - 2024</strong>. All Rights
+					Reserved
+				</div>
+				<div class="credits">
+					Presented by <a href="https://www.redecoin.eu">Redecoin</a>
+				</div>
+			</div>
+		</footer>
+		<!-- End  Footer -->
+		<a
+			href="#"
+			class="back-to-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
+		<!-- Vendor JS Files -->
+		<script src="../assets/vendor/aos/aos.js"></script>
+		<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+		<script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<!-- Template Main JS File -->
+		<script src="../assets/js/main.js"></script>
+		<script src="../assets/js/tab.js"></script>
+	</body>
+</html>

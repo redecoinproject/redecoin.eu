@@ -1,610 +1,801 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>REDEV2 Electronic Money System</title>
-  <meta content="Discover RedeCoin as Redev2 - a cutting-edge decentralized digital currency designed for the future. Experience secure, efficient and user-friendly transactions with our advanced blockchain technology." name="description">
-  <meta content="redev2, blockchain, decentralized, cryptocurrency, digital currency, redecoin, secure, peer-to-peer" name="keywords"> 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.ico" rel="icon">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800" rel="stylesheet">
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body>
-  <!-- ======= Header ======= -->
-  <header id="header" class="d-flex align-items-center ">
-    <div class="container-fluid container-xxl d-flex align-items-center">
+	<head>
+		<meta charset="utf-8" />
+		<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+		<title>REDEV2 Electronic Money System</title>
+		<meta
+			content="Discover RedeCoin as Redev2 - a cutting-edge decentralized digital currency designed for the future. Experience secure, efficient and user-friendly transactions with our advanced blockchain technology."
+			name="description"
+		/>
+		<meta
+			content="redev2, blockchain, decentralized, cryptocurrency, digital currency, redecoin, secure, peer-to-peer"
+			name="keywords"
+		/>
+		<!-- Favicons -->
+		<link href="assets/img/favicon.ico" rel="icon" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800"
+			rel="stylesheet"
+		/>
+		<!-- Vendor CSS Files -->
+		<link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+		<link
+			href="assets/vendor/bootstrap/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+			rel="stylesheet"
+		/>
+		<link
+			href="assets/vendor/glightbox/css/glightbox.min.css"
+			rel="stylesheet"
+		/>
+		<link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+		<!-- Template Main CSS File -->
+		<link href="assets/css/style.css" rel="stylesheet" />
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	<body>
+		<!-- ======= Header ======= -->
+		<header id="header" class="d-flex align-items-center">
+			<div class="container-fluid container-xxl d-flex align-items-center">
+				<div id="logo" class="me-auto">
+					<h1>
+						<a href="index.html">Redev2<span>Coin</span></a>
+					</h1>
+				</div>
+				<nav id="navbar" class="navbar order-last order-lg-0">
+					<ul>
+						<li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
+						<li><a class="nav-link scrollto" href="#about">ABOUT</a></li>
+						<li><a class="nav-link scrollto" href="#schedule">ROADMAP</a></li>
+						<li class="dropdown">
+							<a class="nav-link scrollto" href="#network"
+								><span>NETWORK</span> <i class="bi bi-chevron-down"></i
+							></a>
+							<ul>
+								<li><a class="nav-link scrollto" href="#network">Wallet</a></li>
+								<li>
+									<a href="https://explorer3.redecoin.eu/" target="_blank"
+										>Explorer</a
+									>
+								</li>
+								<li>
+									<a href="https://network.redecoin.eu/" target="_blank"
+										>Stats</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a class="nav-link scrollto" href="#services"
+								><span>SERVICES</span> <i class="bi bi-chevron-down"></i
+							></a>
+							<ul>
+								<li>
+									<a href="services/node-install.html">Node Installation</a>
+								</li>
+								<li>
+									<a href="services/staking.html">Staking </a>
+								</li>
+								<li>
+									<a href="https://vpn.redecoin.eu" target="_blank">VPN</a>
+								</li>
+								<li>
+									<a href="https://pool2.redecoin.eu/" target="_blank"
+										>Official Mining Pool</a
+									>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a class="nav-link scrollto" href="#aggregator">AGGREGATOR</a>
+						</li>
+						<li><a class="nav-link scrollto" href="#exchange">EXCHANGES</a></li>
+					</ul>
+					<i class="bi bi-list mobile-nav-toggle"></i>
+				</nav>
+				<!-- .navbar -->
+			</div>
+			<script>
+				document.addEventListener('DOMContentLoaded', function () {
+					document
+						.querySelector('.mobile-nav-toggle')
+						.addEventListener('click', function () {
+							document
+								.querySelector('#navbar ul')
+								.classList.toggle('navbar-mobile');
+							this.classList.toggle('bi-list');
+							this.classList.toggle('bi-x');
+						});
+					const navLinks = document.querySelectorAll(
+						'#navbar ul li a.nav-link.scrollto'
+					);
+					navLinks.forEach(link => {
+						link.addEventListener('click', function () {
+							document
+								.querySelector('#navbar ul')
+								.classList.remove('navbar-mobile');
+							document
+								.querySelector('.mobile-nav-toggle')
+								.classList.remove('bi-x');
+							document
+								.querySelector('.mobile-nav-toggle')
+								.classList.add('bi-list');
+						});
+					});
+				});
+			</script>
+		</header>
+		<!-- End Header -->
+		<!-- ======= Rede Section ======= -->
+		<section id="hero">
+			<div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
+				<h1 class="mb-4 pb-0">
+					ARE YOU READY?<br />EVOLVE WITH <span>REDEV2COIN</span>
+				</h1>
+				<p class="mb-4 pb-0">
+					Your coins, your assets - always under your control!
+				</p>
+				<a href="#about" class="about-btn scrollto">About RedeV2Coin</a>
+			</div>
+		</section>
+		<!-- End Rede Section -->
+		<main id="main">
+			<!-- ======= About Section ======= -->
+			<section id="about">
+				<div class="container" data-aos="fade-up">
+					<div class="row">
+						<div class="col-lg-6">
+							<h2>About RedeCoin (REDEV2):</h2>
+							<h3>Discover the World of RedeCoin</h3>
+							<p>
+								RedeCoin, with ticker REDEV2, is a state-of-the-art
+								cryptocurrency that aims to redefine the landscape of digital
+								assets. With a vision rooted in decentralization and community
+								empowerment, RedeCoin stands as a beacon for those seeking an
+								alternative financial ecosystem.
+							</p>
+						</div>
+						<div class="col-lg-3">
+							<h3>Key Features:</h3>
+							<ul>
+								<li>Decentralized Network</li>
+								<li>Community-Driven Development</li>
+								<li>Security and Efficiency</li>
+							</ul>
+						</div>
+						<div class="col-lg-3">
+							<h3>Join the Revolution:</h3>
+							<p>
+								Dive into the future of finance with a cutting-edge
+								cryptocurrency offering swift, secure transactions and a
+								powerful network, with a focus on community empowerment.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End About Section -->
+			<!-- ======= Specification Section ======= -->
+			<section id="specification" class="section-without-bg">
+				<div class="container" data-aos="fade-up">
+					<div class="row row-center">
+						<div class="col-lg-3">
+							<h3>Specification:</h3>
+							<ul>
+								<li><b>Total Coin Supply:</b> Unlimited</li>
+								<li><b>Block reward:</b> 2.5 REDEV2</li>
+								<li><b>Algorithm:</b> ETHASH</li>
+								<li><b>Block Time:</b> 15 seconds</li>
+							</ul>
+						</div>
 
-      <div id="logo" class="me-auto">
-        <h1><a href="index.html">Redev2<span>Coin</span></a></h1>
-      </div>
-      <nav id="navbar" class="navbar order-last order-lg-0">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">HOME</a></li>
-          <li><a class="nav-link scrollto" href="#about">COIN-INFO</a></li>
-          <li><a class="nav-link scrollto" href="#whitepaper">WHITEPAPER</a></li>
-          <li><a class="nav-link scrollto" href="#schedule">ROADMAP</a></li>
-          <li><a class="nav-link scrollto" href="#wallet">WALLET</a></li>
-		  <li class="dropdown"><a href="#"><span>BLOCK-EXPLORER</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="http://explorer3.redecoin.eu" target="_blank">BlockExplorer</a></li>
-          </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#network">NETWORK</a></li>
-	        <li><a class="nav-link scrollto" href="#node">NODE</a></li>
-	        <li><a class="nav-link scrollto" href="#stake">STAKE</a></li>
-	        <li><a class="nav-link scrollto" href="#vpn">VPN</a></li>
-          <li><a class="nav-link scrollto" href="#redpool">MININGPOOLS</a></li>
-          <li><a class="nav-link scrollto" href="#swap">SWAP</a></li>
-          <li><a class="nav-link scrollto" href="#aggregator">AGGREGATOR</a></li>
-          <li><a class="nav-link scrollto" href="#exchange">EXCHANGE</a></li>
-          <li><a class="nav-link scrollto" href="#contact">CONTACT</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav>
-      <!-- .navbar -->
-      <!--
-      <a class="buy-tickets scrollto" href="#about">GET STARTED</a>
-      -->  
-    </div>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        document.querySelector('.mobile-nav-toggle').addEventListener('click', function() {
-          document.querySelector('#navbar ul').classList.toggle('navbar-mobile');
-          this.classList.toggle('bi-list');
-          this.classList.toggle('bi-x');
-        });
-        const navLinks = document.querySelectorAll('#navbar ul li a.nav-link.scrollto');
-        navLinks.forEach(link => {
-          link.addEventListener('click', function() {
-            document.querySelector('#navbar ul').classList.remove('navbar-mobile');
-            document.querySelector('.mobile-nav-toggle').classList.remove('bi-x');
-            document.querySelector('.mobile-nav-toggle').classList.add('bi-list');
-          });
-        });
-      });
-    </script>
-    
-  </header>
-  <!-- End Header -->
-  <!-- ======= Rede Section ======= -->
-  <section id="hero">
-    <div class="hero-container" data-aos="zoom-in" data-aos-delay="100">
-      <h1 class="mb-4 pb-0">Are you Ready<br><span>REDEV2COIN</span> in your mine</h1>
-      <p class="mb-4 pb-0">your coin, your asset in your hands</p>
-      <a href="#about" class="about-btn scrollto">About RedeV2Coin</a>
-    </div>
-  </section><!-- End Rede Section -->
-  <main id="main">
-<!-- ======= About Section ======= -->
-<section id="about" style="padding-top: 35px;">
-  <div class="container" data-aos="fade-up">
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>About RedeCoin (REDEV2):</h2>
-        <h3>Discover the World of RedeCoin</h3>
-        <p>RedeCoin, with ticker REDEV2, is a state-of-the-art cryptocurrency that aims to redefine the landscape of digital assets. With a vision rooted in decentralization and community empowerment, RedeCoin stands as a beacon for those seeking an alternative financial ecosystem.</p>
-      </div>
-      <div class="col-lg-3">
-        <h3>Key Features:</h3>
-        <ul>
-          <li>Decentralized Network</li>
-          <li>Community-Driven Development</li>
-          <li>Security and Efficiency</li>
-        </ul>
-      </div>
-      <div class="col-lg-3">
-        <h3>Join the Revolution:</h3>
-        <p>Be a part of the future of finance with RedeCoin. Explore, engage, and empower.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End About Section -->
-<!-- ======= Specification Section ======= -->
-<section id="specification" style="padding-top: 35px;">
-  <div class="container" data-aos="fade-up">
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>Specification:</h2>
-        <h3>RedeCoin Technical Details</h3>
-        <ul>
-          <li>Total Coin Supply: Unlimited</li>
-          <li>Reward per Block: 0.5 REDEV2</li>
-          <li>Algorithm: Ethash</li>
-          <li>Block Time: 15 seconds</li>
-          <li>Decentralized Hashrate: Ensuring enhanced security</li>
-        </ul>
-      </div>
-      <div class="col-lg-3">
-        <h3>Advanced Features:</h3>
-        <ul>
-          <li>Enhanced Security Protocols</li>
-          <li>Swift Transaction Processing</li>
-          <li>Robust Network Infrastructure</li>
-        </ul>
-      </div>
-      <div class="col-lg-3">
-        <h3>Stay Informed:</h3>
-        <p>Stay updated with the latest technical advancements and features of RedeCoin.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Specification Section -->
-<!-- Strukture start Section -->
-  <div style="text-align: center;">
-    <h1>Redecoin REDEV2 Project Overview</h1>
-   
-    <center><canvas id="redev2Chart" style="max-width: 800px; max-height: 400px;"></canvas></center>
-<!-- 
-    <p>POW: 20% | POS: 20% | Dev: 20% | Games: 20% | Invest: 20%</p>
-    <h2>Project Structure</h2>
-    <p>Redecoin is structured with a balanced distribution across key components:</p>
-    <ul>
-        <li>Proof of Work (POW): 20%</li>
-        <li>Proof of Stake (POS): 20%</li>
-        <li>Dev: 20%</li>
-        <li>Games: 20%</li>
-        <li>Invest: 20%</li>
-    </ul>
-    <p><strong>Currently, Dev, Games, Invest, are transferred to the swap from Rede to Redev2.</strong></p>
-  -->   
-</div>
-<script>
-    var ctx = document.getElementById('redev2Chart').getContext('2d');
-    var data = {
-        labels: ['POW 20%', 'POS 35%', 'Dev 10%', 'Games 0%', 'Invest 35%'],
-        datasets: [{
-            data: [20, 35, 10, 0, 35],
-            backgroundColor: ['#FF5733', '#FFD700', '#4CAF50', '#3498DB', '#9B59B6'],
-            hoverBackgroundColor: ['#FF4500', '#FFD700', '#45A049', '#2975D7', '#8E44AD']
-        }]
-    };
-    var options = {
-        animation: {
-            animateRotate: true,
-            animateScale: true
-        }
-    };
-    var myPieChart = new Chart(ctx, {
-        type: 'doughnut', 
-        data: data,
-        options: options
-    });
-</script>
-<!-- Strukture End Section -->
-<section id="schedule" class="section-with-bg">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <h2>Our RoadMap</h2>
-      <p>Here is our roadmap schedule</p>
-    </div>
-    <ul class="nav nav-tabs" role="tablist" data-aos="fade-up" data-aos-delay="100">
-      <li class="nav-item">
-        <a class="nav-link" href="#day-1" role="tab" data-bs-toggle="tab" style="background-color: green;">1. Redev2 Code Development</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-2" role="tab" data-bs-toggle="tab" style="background-color: green;">2. Rede to Redev2 Coin Swap</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-3" role="tab" data-bs-toggle="tab" style="background-color: green;">3. Launch of Stake Platform</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-4" role="tab" data-bs-toggle="tab" style="background-color: green;">4. Deployment of VPN Platform</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-5" role="tab" data-bs-toggle="tab" style="background-color: green;">5. Quick Node Installations via Script</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-6" role="tab" data-bs-toggle="tab" style="background-color: green;">6. Coin Listing on Exchanges</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-7" role="tab" data-bs-toggle="tab" style="background-color: green;">7. Partner and Investor Search</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#day-8" role="tab" data-bs-toggle="tab">8. Partner and Investor Acquisition</a>
-        <p></p>
-      </li>   
-      <li class="nav-item">
-        <a class="nav-link" href="#day-9" role="tab" data-bs-toggle="tab">9. Launch of Gaming Platform</a>
-        <p></p>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#day-10" role="tab" data-bs-toggle="tab">10. System Enhancements</a>
-        <p></p>
-      </li>
-    </ul>
-  </div>
-</section>
-<!-- End Roadmap Section -->
-<!-- Section whitepaper -->
-<section id="whitepaper">
+						<div class="col-lg-3">
+							<h3>Advanced Features:</h3>
+							<ul>
+								<li>Enhanced Security Protocols</li>
+								<li>Swift Transaction Processing</li>
+								<li>Robust Network Infrastructure</li>
+								<li>Optimized User Experience Design</li>
+							</ul>
+						</div>
+						<div class="col-lg-6">
+							<canvas
+								id="redev2Chart"
+								style="max-width: 800px; max-height: 400px"
+							></canvas>
+						</div>
+					</div>
+				</div>
+			</section>
+			<script>
+				var ctx = document.getElementById('redev2Chart').getContext('2d');
+				var data = {
+					datasets: [
+						{
+							data: [20, 35, 10, 0, 35],
+							backgroundColor: [
+								'#FF5733',
+								'#FFD700',
+								'#4CAF50',
+								'#3498DB',
+								'#9B59B6'
+							],
+							hoverBackgroundColor: [
+								'#FF4500',
+								'#FFD700',
+								'#45A049',
+								'#2975D7',
+								'#8E44AD'
+							]
+						}
+					],
+					labels: ['POW 20%', 'POS 35%', 'Dev 10%', 'Games 0%', 'Invest 35%']
+				};
+				var options = {
+					animation: {
+						animateRotate: true,
+						animateScale: true
+					},
+					plugins: {
+						legend: {
+							position: 'right'
+						}
+					}
+				};
+				var myPieChart = new Chart(ctx, {
+					type: 'doughnut',
+					data: data,
+					options: options
+				});
+			</script>
+			<style>
+				.chartjs-legend-text {
+					writing-mode: vertical-rl;
+					text-orientation: mixed;
+				}
+			</style>
+			<!-- End Specification Section -->
 
-</section>
-<!-- End Section whitepaper -->
-<!-- ======= Wallet Section ======= -->
-<section id="wallet" style="background-color:White;">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header"><br></br>
-      <h2>Wallet REDEV2</h2>
-      <p>Wallet config</p>
-      <p>Network Name: REDEV2</p>
-      <p>RPC URL:  https://rpc2.redecoin.eu/</p>
-      <p>Chain ID: 1972</p>
-      <p>Currency: REDEV2</p>
-      <p>Explorer2: https://explorer3.redecoin.eu/</p>
-    </div>
-    <div class="row" data-aos="fade-up" data-aos-delay="100">
-      <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb">
-          <center><img src="assets/img/wallet/raspberry.png" class="img-fluid" alt="MetaMask Wallet raspberry"></center>
-          <center>
-            <div class="class-thumb"><br>
-              <h6 data-aos="fade-up" data-aos-delay="250"><a target="_blank" href="https://metamask.io" class="img-fluid" alt="raspberry">MetaMask</a></h6>
-            </div>
-          </center>
-        </div>
-      </div>
-      <div class="mt-5 mt-lg-0 mt-md-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="500">
-        <div class="class-thumb">
-          <center><img src="assets/img/wallet/windows.png" class="img-fluid" alt="Windows Wallet"></center>
-          <center>
-            <div class="class-thumb"><br>
-              <h6 data-aos="fade-up" data-aos-delay="250">
-                <a target="_blank" href="https://github.com/redecoinproject/redecoin/releases/download/v2.2.0.0/redev2wallet-2.2-windows.zip" class="img-fluid" alt="Windows Wallet">Windows Wallet</a>
-              </h6>
-            </div>
-          </center>
-        </div>
-      </div>
-      <div class="mt-5 mt-lg-0 col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="600">
-        <div class="class-thumb">
-          <center><img src="assets/img/wallet/linux.png" class="img-fluid" alt="Linux Wallet metamask"></center>
-          <center>
-            <div class="class-thumb"><br>
-              <h6 data-aos="fade-up" data-aos-delay="250"><a target="_blank" href="https://metamask.io" class="img-fluid" alt="Linux Wallet">Linux GNU metamask</a></h6>
-            </div>
-          </center>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Wallet Section -->
-<!-- ======= Network Section ======= -->
-<section id="network" class="section-with-bg">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <br></br>
-      <h2>Network redev2</h2>
-      <p>Network stats</p>
-    </div>
-    <center>
-      <div class="col-lg-14 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb">
-          <center><img src="assets/img/network/network.jpg" class="img-fluid" alt="Network"></center>         
-          <a target="_blank" href="https://network.redecoin.eu/">https://network.redecoin.eu/</a>
-          <p></p>
-          <p>How to add a node to stats network?</p>
-          <p>Example:</p> 
-          <p></p>
-          <p>./geth --syncmode "full" --ethstats $HOSTNAME:Redev2@network.redecoin.eu:3000</p>
-          <p></p>
-        </div>
-      </div>
-    </center>
-    <p> </p>
-    <div class="swiper-pagination"></div>
-  </div>
-  <br></br>	
-</section>
-<!-- End Network Section -->
-<!-- ======= Node Section ======= -->
-<section id="node">
-  <div class="container" data-aos="fade-up">
-      <div class="section-header">
-          <br></br>
-          <h2>Node</h2>
-      </div>
-      <center>
-          <a href="https://github.com/redecoinproject/node" target="_blank">https://github.com/redecoinproject/node</a>
-          <br></br>    
-          <p>REDEV2 Network Node Installation</p>
-          <p>This script allows you to install a node for the REDEV2 network on your Ubuntu system. Choose the appropriate version for your Ubuntu distribution and run the corresponding command below.</p>        
-          <p>Ubuntu 18.04</p>
-          <code>curl -sSL https://github.com/redecoinproject/node/raw/master/ubdate_ubuntu18.sh | bash</code>
-          <p>Ubuntu 20.04</p>
-          <code>curl -sSL https://github.com/redecoinproject/node/raw/master/ubuntu20.sh | bash</code>
-          <p>Ubuntu 23.04</p>
-          <code>curl -sSL https://github.com/redecoinproject/node/raw/master/ubuntu23.04.sh | bash</code>
-          <p>ARM</p>
-          <code>curl -sSL https://github.com/redecoinproject/node/raw/master/arm.sh | bash</code>
-          <p>Update for ARM</p>
-          <code>curl -sSL https://github.com/redecoinproject/node/raw/master/ubdate_arm.sh | bash</code>
-          <p>Make sure to run the script as an administrator if required by your system.</p>
-          <p>License: This project is licensed under the MIT License.</p>
-          <p>Contributing: If you'd like to contribute to this project, please follow our contribution guidelines.</p>
-          <p>Issues: If you encounter any issues or have questions, please open an issue on our GitHub repository.</p>         
-          <p>Happy node installation!</p>
-      </center>     
-  </div>
-  <br></br>
-</section>
-<!-- End Node Section -->
-<!-- ======= stake ======= -->
-<section id="stake" class="section-with-bg">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <br></br>
-      <h2>Staking Redev2</h2>
-      <p>Choose one of the options below to declare staking between 1000 and 100,000 coins of redev2.</p>
-    </div>
-    <center>
-      <div>
-        <h3>Option 1: Metamask + Node</h3>
-        <p>Use the link below to declare staking using Metamask and a node.</p>
-        <a href="https://stake.redecoin.eu" target="_blank">https://stake.redecoin.eu</a>
-      </div>
-      <br>
-      <div>
-        <h3>Option 2: Without Node</h3>
-        <p>If you don't want to install a node, you can use the external service provided by PAC.</p>
-        <a href="https://redev2-staking.pw/" target="_blank">https://redev2-staking.pw/</a>
-      </div>
-    </center>
-  </div><br></br>
-</section>
-<!-- ======= stake ======= -->
-<!-- ======= vpn ======= -->
-<section id="vpn">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <br></br>
-      <h2>vpn</h2>
-    </div>
-    <center>
-      <a href="https://vpn.redecoin.eu" target="_blank">https://vpn.redecoin.eu</a>
-      <br></br>
-	    <p>Affordable VPS Hosting with Redev2 Coin Payment - Experience Anonymous Internet Surfing</p>
-	    <p> </p>
-      <p> </p>
-    </center>
-  </div><br></br>
-</section>
-<!-- ======= vpn ======= -->
-<!-- ======= RedPool Section ======= -->
-<section id="redpool" class="section-with-bg">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <br></br>
-      <h2>Pool Coin Mining</h2>
-      <p>get your favorite coin on our pool</p>
-    </div>
-  </div><br></br>
-  <center>
-    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-      <div class="class-thumb">
-        <a target="_blank" href="https://pool2.redecoin.eu/">
-          <img src="assets/img/pool/pool2.png" alt="RedPool Redev2" style="width:100%; max-width:auto; height:auto;">
-        </a>
-        <br></br>
-        <p>
-	<a target="_blank" href="https://pool2.redecoin.eu/">
-        <img src="assets/img/pool/baner-redev2.gif" alt="RedeCoin Pool Team" style="width: auto; height: auto;">
-        </a>
-	</p>
-      </div>
-    </div>
-  </center> 
-  <p></p>
-  <p></p>
-  <center>
-    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-      <div class="class-thumb">
-        <a target="_blank" href="https://explorer3.redecoin.eu/">RedeCoin Explorer</a>
-      </div>
-    </div>
-  </center>
-  <p></p>
-  <p></p>
-  <div class="swiper-pagination"></div>
-  <br>
-</section>
-<!-- End RedPool Section -->
-<!-- ======= Data swap Section ======= -->
-    <section id="swap">
-    <div class="container" data-aos="fade-up">
-        <div class="section-header"><br></br>
-          <h2>Swap REDE to REDEV2</h2>
-        </div>
-		<center>
-		    <div class="col-lg-4 col-md-6 col-12" data-aos="fade-up" data-aos-delay="400">
-      <div class="class-thumb">
-        <a target="_blank" href="https://swap.redecoin.eu/">Visit swap Rede to Redev2</a>
-	      <p>Swap end to 1.01.2024r</p>
-	      <p>After this date, it is not possible to change the rade to redev2</p>
-      </div>
-    </div>
-		</center>
-		</div><br></br>
-		</div><br></br>
-    </section>
-<!-- End swap Section -->
-<!-- ======= aggregator ======= -->
-<section id="aggregator" class="section-with-bg">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header text-center">
-      <br></br>
-      <h2>Aggregator</h2>
-    </div>
-    <center>
-      <a target="_blank" href="https://coinpaprika.com/coin/redev2-redecoin">
-        <img src="assets/img/aggregators/coinpaprika.png" class="img-fluid" alt="CoinPaprika" width="300" height="150">
-      </a>
-      <p> </p>
-      <a target="_blank" href="https://blockspot.io/coin/redecoin/">
-        <img src="assets/img/aggregators/blockspot.png" class="img-fluid" alt="Blockspot" width="300" height="150">
-      </a>
-      <p> </p>
-    </center>
-  </div>
-  <br><br>
-</section>
-<!-- ======= aggregator ======= -->
-<!-- ======= exchange ======= -->
-<section id="exchange">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header text-center">
-      <br></br>
-      <h2>Exchange</h2>
-      <p>List exchange Redecoin</p>
-    </div>
-    <div class="row">
-      <div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb text-center">
-          <a target="_blank" href="https://www.xredx.org/signup?refid=ID214518D53F">
-            <img src="assets/img/exchange/xredx.org.png" class="img-fluid" alt="xredx.org" width="144" height="66">
-          </a>
-        </div>
-      </div>
-      <div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb text-center">
-          <a target="_blank" href="https://www.finexbox.com//Reg/register/referrer/657608.html">
-            <img src="assets/img/exchange/finexbox.png" class="img-fluid" alt="finexbox.com" width="144" height="66">
-          </a>
-        </div>
-      </div>
-      <div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb text-center">
-          <a target="_blank" href="https://xeggex.com?ref=6285e48f55fefa0f5fab337f">
-            <img src="assets/img/exchange/xeggex_blue_with_box.png" class="img-fluid" alt="xeggex.com" width="144" height="66">
-          </a>
-        </div>
-      </div>
-      <div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb text-center">
-          <a target="_blank" href="https://nonkyc.io?ref=654b616c0018c1cd3eecdb11">
-            <img src="assets/img/exchange/nokyc.png" class="img-fluid" alt="nokyc.io" width="144" height="66">
-          </a>
-        </div>
-      </div>
-      <div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
-        <div class="class-thumb text-center">
-          <a target="_blank" href="https://www.pacman.trade/">
-            <img src="assets/img/exchange/pacman.png" class="img-fluid" alt="pacman" width="144" height="66">
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ======= exchange ======= -->    
-<!-- ======= Contact Section ======= -->
-<section id="contact">
-  <div class="container" data-aos="fade-up">
-    <div class="section-header">
-      <h2>Contact Us</h2>
-      <p>Find us on our community.</p>
-    </div>
-    <div class="row contact-info">
-      <div class="col-md-4">
-        <div class="contact-address">
-          <i class="bi bi-geo-alt"></i>
-          <h3>Address</h3>
-          <a target="_blank" href="https://www.redecoin.eu">https://www.redecoin.eu</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="contact-phone">
-          <i class="bi bi-phone"></i>
-          <h3>Discord</h3>
-          <a target="_blank" href="https://discord.gg/MhBP2hEehU">https://discord.gg/MhBP2hEehU</a>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="contact-telegram">
-          <i class="bi bi-telegram"></i>
-          <h3>Telegram</h3>
-          <a target="_blank" href="https://t.me/+rNRAiKzx-ydiYjhk">https://t.me/+rNRAiKzx-ydiYjhk</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End Contact Section -->
-<!-- End #main -->
-  </main>
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-3 col-md-6 footer-info">
-            <img src="assets/img/apple-touch-icon.png" alt="RedeCoin">
-            <p>Redecoin is a digital currency that can be mined using a GPU</p>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i><a href="https://miningpoolstats.stream/redecoin" target="_blank">Miningpoolstat.stream</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Download</h4>
-            <ul>
-              <li><i class="bi bi-chevron-right"></i><a href="https://github.com/trexminer/T-Rex/releases">T-Rex Github</a></li>
-              <li><i class="bi bi-chevron-right"></i><a href="https://github.com/todxx/teamredminer/releases">Team Red Miner Github</a></li>
-            </ul>
-          </div>
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Social Media</h4>
-            <div class="social-links">
-              <a href="https://mobile.twitter.com/CoinRede" class="twitter"><i class="bi bi-twitter"></i></a>
-              <a href="https://t.me/+rNRAiKzx-ydiYjhk" class="telegram"><i class="bi bi-telegram"></i></a>
-              <a href="https://discord.gg/MhBP2hEehU" class="discord"><i class="bi bi-discord"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong>Redecoin 2022 - 2023</strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        Presented by <a href="https://www.redecoin.eu">Redecoin</a>
-      </div>
-    </div>
-  </footer>
-  <!-- End  Footer -->
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-  <script src="assets/js/tab.js"></script>
-</body>
+			<!-- ======= Roadmap Section ======= -->
+			<section id="schedule" class="section-with-bg">
+				<div class="container" data-aos="fade-up">
+					<h2 class="section-header">Our RoadMap</h2>
+					<ul class="roadmap__list">
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">REDEV2 Code Development</h3>
+							<p class="roadmap__item-text">
+								We embarked on a major journey with REDEV2 Code Development.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">
+								Launching official mining pool
+							</h3>
+							<p class="roadmap__item-text">
+								Launched our official mining pool offering cryptocurrency
+								enthusiasts a convenient and efficient platform for effective
+								coin mining.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Launch of Staking Platform</h3>
+							<p class="roadmap__item-text">
+								Launched of our staking platform, which offers a unique
+								opportunity for users to maximize their crypto earnings through
+								holdings REDEV2 coins.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Launching of VPN Platform</h3>
+							<p class="roadmap__item-text">
+								Launched a proprietary VPN platform that offers exceptional
+								privacy and security, ensuring your online activities are
+								anonymous and protected.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Listing on Xeggex.com</h3>
+							<p class="roadmap__item-text">
+								Listing REDEV2 on a popular exchange among miners -
+								<a href="https://xeggex.com/market/REDEV2_USDT">Xeggex</a>
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Listing on Nonkyc.io</h3>
+							<p class="roadmap__item-text">
+								Listing REDEV2 on a new exchange -
+								<a href="https://nonkyc.io/market/REDEV2_USDT">NonKYC</a>
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Node installation Script</h3>
+							<p class="roadmap__item-text">
+								Release of our node installation script. This simplifies the
+								setup process, allowing you to install a node on your server
+								with a single command!
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Listing on CoinPaprika</h3>
+							<p class="roadmap__item-text">
+								Listing on a popular coin aggregator where you can add REDEV2 to
+								your portfolio and monitor the price in real time.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">Listing on Pacman.Trade</h3>
+							<p class="roadmap__item-text">
+								Listing REDEV2 on a new exchange -
+								<a href="https://www.pacman.trade/#/exchange/redev2_usdt"
+									>Pacman.Trade</a
+								>
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">System improvement</h3>
+							<p class="roadmap__item-text">
+								We are relentlessly developing and improving our system to
+								achieve optimal performance. We strive to ensure that all of our
+								services run smoothly and reliably.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+
+						<li class="roadmap__item roadmap__item--completed">
+							<h3 class="roadmap__item-header">REDE -> REDEV2 SWAP</h3>
+							<p class="roadmap__item-text">
+								We have successfully completed the transfer of coins from the
+								old REDE network to the new REDEV2 network for all willing users
+								in its entirety.
+							</p>
+							<img class="roadmap__item-icon" src="assets/img/icons/done.png" />
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">
+								Integration with PAC Game Center
+							</h3>
+							<p class="roadmap__item-text">
+								Adding REDEV2 as one of the available coins in PAC Game Center.
+								Registration in tournaments for REDEV2 will be available, as
+								well as receiving rewards.
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">Listings on Aggregators</h3>
+							<p class="roadmap__item-text">
+								REDEV2 will be added to even more aggregators for tracking such
+								as LiveCoinWatch, Binance, ByBit, CoinMarketCap, CoinGecko,
+								Crypto.Com and others
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">Partner and Investor Search</h3>
+							<p class="roadmap__item-text">
+								This exciting milestone underscores our commitment to expanding
+								our network and fostering collaborative relationships for mutual
+								growth and success.
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">New Exchange Listings</h3>
+							<p class="roadmap__item-text">
+								REDEV2 should appear on even more Tier-2 exchanges.
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">REDEV2 Real Life Payments</h3>
+							<p class="roadmap__item-text">
+								We aim to integrate REDEV2 into real payments, which is a
+								practical use of cryptocurrency. Our future plans include
+								bringing this integration to fast food establishments so that
+								customers can easily pay with REDEV2 coins.
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">Xredx.com v2.0 - New life</h3>
+							<p class="roadmap__item-text">
+								Gearing up to launch a major update on our exchange Xredx.org,
+								which will completely change the appearance of the service and
+								add many necessary features to it
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">Staking on Xredx.com</h3>
+							<p class="roadmap__item-text">
+								Adding a coin-stacking function directly into the exchange
+								functionality, without the use of third-party services, for
+								quick and convenient access to your assets.
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">
+								Game character creator portal
+							</h3>
+							<p class="roadmap__item-text">
+								Excited to introduce a toolkit specifically for game developers.
+								that designed to make character creation more efficient and
+								accessible, allowing developers to bring their creative ideas to
+								life with ease.
+							</p>
+						</li>
+						<li class="roadmap__item">
+							<h3 class="roadmap__item-header">Hardware rental service</h3>
+							<p class="roadmap__item-text">
+								The launch of the equipment rental service is planned. It is
+								aimed at both target users and those who need high computing
+								power to solve specific tasks. The service will provide an
+								opportunity to rent computing power at a low cost and
+								efficiently.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- End Roadmap Section -->
+
+			<!-- ======= Network Section ======= -->
+			<section id="network" class="section-without-bg">
+				<div class="container" data-aos="fade-up">
+					<h2 class="section-header">REDEV2 Network</h2>
+					<ul class="network__list">
+						<li class="network__item">Network Name <span>REDEV2</span></li>
+						<li class="network__item">
+							RPC URL <span>https://rpc2.redecoin.eu/</span>
+						</li>
+						<li class="network__item">Chain ID <span>1972</span></li>
+						<li class="network__item">Symbol <span>REDEV2</span></li>
+						<li class="network__item">
+							Explorer URL<span>https://explorer3.redecoin.eu/</span>
+						</li>
+					</ul>
+					<div class="network">
+						<div class="network__explorer">
+							<a href="http://explorer3.redecoin.eu/" target="_blank"
+								><img
+									class="network__img"
+									src="assets/img/buttons/explorer.jpg"
+									alt=""
+							/></a>
+						</div>
+						<div class="network__metamask">
+							<a href="https://chainlist.org/?search=rede" target="_blank"
+								><img
+									class="network__img"
+									src="assets/img/buttons/add-mm.jpg"
+									alt=""
+							/></a>
+						</div>
+
+						<div class="network__stats">
+							<a href="https://network.redecoin.eu/" target="_blank">
+								<img
+									class="network__img"
+									src="assets/img/buttons/network.jpg"
+									alt=""
+							/></a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- End Network Section -->
+
+			<!-- ======= Services Section ======= -->
+			<section id="services" class="section-with-bg">
+				<div class="container" data-aos="fade-up">
+					<h2 class="section-header">Our Services</h2>
+
+					<ul class="services__list">
+						<li class="services__item">
+							<a href="services/node-install.html" class="services__item-link"
+								>Node Script</a
+							>
+							<a
+								class="service__item-link--more"
+								href="services/node-install.html"
+								>Install now</a
+							>
+							<p class="service__item-text">
+								Install REDEV2 node on your server in 1 command, without special
+								knowledge and system settings
+							</p>
+						</li>
+						<li class="services__item">
+							<a href="services/staking.html" class="services__item-link"
+								>Staking</a
+							>
+							<a class="service__item-link--more" href="services/staking.html"
+								>Explore now</a
+							>
+							<p class="service__item-text">
+								Stake to earn extra rewards while supporting network by holding
+								REDEV2 it for a specific period
+							</p>
+						</li>
+						<li class="services__item">
+							<a href="https://vpn.redecoin.eu" class="services__item-link"
+								>VPN</a
+							>
+							<a class="service__item-link--more" href="https://vpn.redecoin.eu"
+								>Try it now</a
+							>
+							<p class="service__item-text">
+								Try anonymous internet with our affordable VPS hosting, payable
+								with RedeV2. Be sure of your online privacy
+							</p>
+						</li>
+						<li class="services__item">
+							<a href="https://pool2.redecoin.eu/" class="services__item-link"
+								>Mining Pool</a
+							>
+							<a
+								class="service__item-link--more"
+								href="https://pool2.redecoin.eu/"
+								>Join now</a
+							>
+							<p class="service__item-text">
+								Join our official mining pool to get REDEV2 using your own
+								hardware, all with a low commission.
+							</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- End Services Section -->
+
+			<!-- ======= aggregator ======= -->
+			<section id="aggregator" class="section-without-bg">
+				<div class="container" data-aos="fade-up">
+					<h2 class="section-header">Aggregators</h2>
+					<ul class="aggregator__list">
+						<li class="aggregator__list-item">
+							<a
+								target="_blank"
+								href="https://coinpaprika.com/coin/redev2-redecoin"
+							>
+								<img
+									src="assets/img/aggregators/coinpaprika.png"
+									class="img-fluid"
+									alt="CoinPaprika"
+									width="300"
+									height="150"
+								/>
+							</a>
+						</li>
+						<li class="aggregator__list-item">
+							<a target="_blank" href="https://blockspot.io/coin/redecoin/">
+								<img
+									src="assets/img/aggregators/blockspot.png"
+									class="img-fluid"
+									alt="Blockspot"
+									width="300"
+									height="150"
+								/>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- ======= aggregator ======= -->
+			<!-- ======= exchange ======= -->
+			<section id="exchange" class="section-with-bg">
+				<div class="container" data-aos="fade-up">
+					<h2 class="section-header">Exchanges</h2>
+					<div class="row row-inline">
+						<div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
+							<div class="class-thumb text-center">
+								<a
+									target="_blank"
+									href="https://www.pacman.trade/#/exchange/redev2_usdt"
+								>
+									<img
+										src="assets/img/exchange/pacman.png"
+										class="img-thumbnail"
+										alt="pacman.trade"
+										width="144"
+										height="66"
+									/>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
+							<div class="class-thumb text-center">
+								<a target="_blank" href="https://xeggex.com/market/REDEV2_USDT">
+									<img
+										src="assets/img/exchange/xeggex_blue_with_box.png"
+										class="img-thumbnail"
+										alt="xeggex.com"
+										width="144"
+										height="66"
+									/>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
+							<div class="class-thumb text-center">
+								<a
+									target="_blank"
+									href="https://www.finexbox.com/market/pair/REDEV2-USDT.html"
+								>
+									<img
+										src="assets/img/exchange/finexbox.png"
+										class="img-thumbnail"
+										alt="finexbox.com"
+										width="144"
+										height="66"
+									/>
+								</a>
+							</div>
+						</div>
+
+						<div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
+							<div class="class-thumb text-center">
+								<a target="_blank" href="https://nonkyc.io/market/REDEV2_USDT">
+									<img
+										src="assets/img/exchange/nokyc.png"
+										class="img-thumbnail"
+										alt="nokyc.io"
+										width="144"
+										height="66"
+									/>
+								</a>
+							</div>
+						</div>
+						<div class="col-12 my-3" data-aos="fade-up" data-aos-delay="400">
+							<div class="class-thumb text-center">
+								<a href="https://www.xredx.org/markets" target="_blank">
+									<img
+										src="assets/img/exchange/xredx.org.png"
+										class="img-thumbnail"
+										alt="xredx.org"
+										width="144"
+										height="66"
+									/>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- ======= exchange ======= -->
+			<!-- End #main -->
+		</main>
+		<!-- ======= Footer ======= -->
+		<footer id="footer">
+			<div class="footer-top">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-3 col-md-6 footer-info">
+							<img src="assets/img/apple-touch-icon.png" alt="RedeCoin" />
+							<p>
+								Be a part of the future of finance with RedeCoin. Explore,
+								engage, and empower.
+							</p>
+						</div>
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Track us</h4>
+							<ul>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a
+										href="https://miningpoolstats.stream/redecoin"
+										target="_blank"
+										>Miningpoolstats</a
+									>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a
+										href="https://coinpaprika.com/coin/redev2-redecoin/"
+										target="_blank"
+										>CoinPaprika</a
+									>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://blockspot.io/coin/redecoin/" target="_blank"
+										>BlockSpot</a
+									>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-6 footer-links">
+							<h4>Utilities</h4>
+							<ul>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="services/node-install.html">Node Script</a>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://stake.redecoin.eu/">Staking Panel</a>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://vpn.redecoin.eu">VPN</a>
+								</li>
+								<li>
+									<i class="bi bi-chevron-right"></i
+									><a href="https://redev2-staking.pw/">PAC Staking Platform</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-3 col-md-6 footer-contact">
+							<h4>Social Media</h4>
+							<div class="social-links">
+								<a
+									href="https://www.redecoin.eu"
+									class="website"
+									target="_blank"
+									><i class="bi bi-globe"></i
+								></a>
+								<a
+									href="https://github.com/redecoinproject"
+									class="github"
+									target="_blank"
+									><i class="bi bi-github"></i
+								></a>
+								<a
+									href="https://twitter.com/CoinRede"
+									class="twitter"
+									target="_blank"
+									><i class="bi bi-twitter"></i
+								></a>
+								<a
+									href="https://t.me/+rNRAiKzx-ydiYjhk"
+									class="telegram"
+									target="_blank"
+									><i class="bi bi-telegram"></i
+								></a>
+								<a
+									href="https://discord.gg/MhBP2hEehU"
+									class="discord"
+									target="_blank"
+									><i class="bi bi-discord"></i
+								></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="copyright">
+					&copy; Copyright <strong>Redecoin 2022 - 2024</strong>. All Rights
+					Reserved
+				</div>
+				<div class="credits">
+					Presented by <a href="https://www.redecoin.eu">Redecoin</a>
+				</div>
+			</div>
+		</footer>
+		<!-- End  Footer -->
+		<a
+			href="#"
+			class="back-to-top d-flex align-items-center justify-content-center"
+			><i class="bi bi-arrow-up-short"></i
+		></a>
+		<!-- Vendor JS Files -->
+		<script src="assets/vendor/aos/aos.js"></script>
+		<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+		<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+		<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+		<!-- Template Main JS File -->
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/tab.js"></script>
+	</body>
 </html>
-
-
