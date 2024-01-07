@@ -280,7 +280,6 @@
 		})
 		.then(data => {
 		  if (data !== undefined) {
-			// Formatowanie liczby z przecinkami
 			const formattedNumber = parseFloat(data).toLocaleString('en-US', { maximumFractionDigits: 5 });
 			document.getElementById('coinSupplyValue').textContent = `${formattedNumber} (REDEV2)`;
 		  } else {
@@ -295,17 +294,6 @@
   
 	window.onload = fetchCoinSupplyValue;
 </script>
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
 			<!-- End Specification Section -->
 
 			<!-- ======= Roadmap Section ======= -->
