@@ -59,13 +59,15 @@ h6 {
 
 /* Inline ROW Images */
 .row-inline {
-	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-	justify-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* This will make sure 3 logos are in one row */
+    justify-items: center;
+    gap: 20px; 
 }
 
+
 .img-thumbnail {
-	transition: transform 0.3s;
+	transition: transform 0.4s;
 }
 
 .img-thumbnail:hover {
