@@ -219,45 +219,48 @@
 				</div>
 			</section>
   <script>
-    var ctx = document.getElementById('redev2Chart').getContext('2d');
-    var data = {
-      datasets: [
-        {
-          data: [20, 70, 10],
-          backgroundColor: [
-            '#FF5733',
-            '#FFD700',
-            '#4CAF50',
-            '#3498DB',
-            '#9B59B6'
-          ],
-          hoverBackgroundColor: [
-            '#FF4500',
-            '#FFD700',
-            '#45A049',
-            '#2975D7',
-            '#8E44AD'
-          ]
-        }
+var ctx = document.getElementById('redev2Chart').getContext('2d');
+var data = {
+  datasets: [
+    {
+      data: [20, 10, 70],
+      backgroundColor: [
+        '#FF5733',
+        '#FFD700',
+        '#4CAF50',
+        '#3498DB',
+        '#9B59B6'
       ],
-      labels: ['Miner 20%', 'Stake 70%', 'Dev 10%']
-    };
-    var options = {
+      hoverBackgroundColor: [
+        '#FF4500',
+        '#FFD700',
+        '#45A049',
+        '#2975D7',
+        '#8E44AD'
+      ],
+      // Opcje animacji dla tego zestawu danych
       animation: {
         animateRotate: true,
-        animateScale: true
-      },
-      plugins: {
-        legend: {
-          position: 'right'
-        }
+        animateScale: true,
+        duration: 10000
       }
-    };
-    var myPieChart = new Chart(ctx, {
-      type: 'doughnut',
-      data: data,
-      options: options
-    });
+    }
+  ],
+  labels: ['Miner 20%', 'Dev 10%', 'Stake 70%']
+};
+var options = {
+  plugins: {
+    legend: {
+      position: 'right'
+    }
+  }
+};
+var myPieChart = new Chart(ctx, {
+  type: 'doughnut',
+  data: data,
+  options: options
+});
+
   </script>
 			<style>
 				.chartjs-legend-text {
