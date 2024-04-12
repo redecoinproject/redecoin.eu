@@ -190,9 +190,7 @@
 								<li><b>Total Coin Supply:</b> Unlimited</li>
 								<li><b>Block:</b> 2.5 REDEV2</li>
 								<li><b>Block reward miner:</b> 0.5 REDEV2</li>
-								<li><b>Block reward stake:</b> 0.875 REDEV2</li>
-								<li><b>Block reward games:</b> 0.5 REDEV2</li>
-								<li><b>Block reward invest:</b> 0.375 REDEV2</li>
+								<li><b>Block reward stake:</b> 1.75 REDEV2</li>
 								<li><b>Block reward dev:</b> 0.25 REDEV2</li>
 								<li><b>Algorithm:</b> ETHASH</li>
 								<li><b>Block Time:</b> 15 seconds</li>
@@ -220,47 +218,47 @@
 					</div>
 				</div>
 			</section>
-			<script>
-				var ctx = document.getElementById('redev2Chart').getContext('2d');
-				var data = {
-					datasets: [
-						{
-							data: [20, 35, 10, 20, 15],
-							backgroundColor: [
-								'#FF5733',
-								'#FFD700',
-								'#4CAF50',
-								'#3498DB',
-								'#9B59B6'
-							],
-							hoverBackgroundColor: [
-								'#FF4500',
-								'#FFD700',
-								'#45A049',
-								'#2975D7',
-								'#8E44AD'
-							]
-						}
-					],
-					labels: ['POW 20%', 'POS 35%', 'Dev 10%', 'Games 20%', 'Invest 15%']
-				};
-				var options = {
-					animation: {
-						animateRotate: true,
-						animateScale: true
-					},
-					plugins: {
-						legend: {
-							position: 'right'
-						}
-					}
-				};
-				var myPieChart = new Chart(ctx, {
-					type: 'doughnut',
-					data: data,
-					options: options
-				});
-			</script>
+  <script>
+    var ctx = document.getElementById('redev2Chart').getContext('2d');
+    var data = {
+      datasets: [
+        {
+          data: [20, 70, 10],
+          backgroundColor: [
+            '#FF5733',
+            '#FFD700',
+            '#4CAF50',
+            '#3498DB',
+            '#9B59B6'
+          ],
+          hoverBackgroundColor: [
+            '#FF4500',
+            '#FFD700',
+            '#45A049',
+            '#2975D7',
+            '#8E44AD'
+          ]
+        }
+      ],
+      labels: ['Miner 20%', 'Stake 70%', 'Dev 10%']
+    };
+    var options = {
+      animation: {
+        animateRotate: true,
+        animateScale: true
+      },
+      plugins: {
+        legend: {
+          position: 'right'
+        }
+      }
+    };
+    var myPieChart = new Chart(ctx, {
+      type: 'doughnut',
+      data: data,
+      options: options
+    });
+  </script>
 			<style>
 				.chartjs-legend-text {
 					writing-mode: vertical-rl;
