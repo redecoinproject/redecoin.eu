@@ -191,6 +191,7 @@
 								<li><b>Block:</b> 2.5 REDEV2</li>
 								<li><b>Block reward miner:</b> 0.5 REDEV2</li>
 								<li><b>Block reward stake:</b> 1.75 REDEV2</li>
+								<li><b>Block reward games:</b> 0.5 REDEV2</li>
 								<li><b>Block reward dev:</b> 0.25 REDEV2</li>
 								<li><b>Algorithm:</b> ETHASH</li>
 								<li><b>Block Time:</b> 15 seconds</li>
@@ -223,7 +224,7 @@ var ctx = document.getElementById('redev2Chart').getContext('2d');
 var data = {
   datasets: [
     {
-      data: [20, 10, 70],
+      data: [20, 10, 20, 50],
       backgroundColor: [
         '#FF5733',
         '#FFD700',
@@ -246,7 +247,7 @@ var data = {
       }
     }
   ],
-  labels: ['Miner 20%', 'Dev 10%', 'Stake 70%']
+  labels: ['Miner 20%', 'Dev 10%', 'Games 20%', 'Stake 50%']
 };
 var options = {
   plugins: {
