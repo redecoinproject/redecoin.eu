@@ -195,9 +195,6 @@
 								<li><b>Block reward dev:</b> 0.25 REDEV2</li>
 								<li><b>Algorithm:</b> ETHASH</li>
 								<li><b>Block Time:</b> 15 seconds</li>
-								<!--
-								<li><b>All Coins Fund:</b> <span id="coinSupplyValue">Loading...</span></li>
-								-->
 							</ul>
 						</div>
 
@@ -269,35 +266,6 @@ var myPieChart = new Chart(ctx, {
 					text-orientation: mixed;
 				}
 			</style>
-
-
-<script>
-	function fetchCoinSupplyValue() {
-	  const apiUrl = 'https://explorer3.redecoin.eu/api/?module=stats&action=coinsupply';
-  
-	  fetch(apiUrl)
-		.then(response => {
-		  if (!response.ok) {
-			throw new Error(`Network response was not ok, status: ${response.status} - ${response.statusText}`);
-		  }
-		  return response.json();
-		})
-		.then(data => {
-		  if (data !== undefined) {
-			const formattedNumber = parseFloat(data).toLocaleString('en-US', { maximumFractionDigits: 5 });
-			document.getElementById('coinSupplyValue').textContent = `${formattedNumber} REDEV2`;
-		  } else {
-			throw new Error('Data result is undefined or missing');
-		  }
-		})
-		.catch(error => {
-		  console.error('Error fetching data:', error.message);
-		  document.getElementById('coinSupplyValue').textContent = `Error: ${error.message}`;
-		});
-	}
-  
-	window.onload = fetchCoinSupplyValue;
-</script>
 			<!-- End Specification Section -->
 
 			<!-- ======= Roadmap Section ======= -->
